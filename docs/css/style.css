@@ -1,0 +1,821 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #FFFF00;
+  padding: 1rem 2rem;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  position: relative;
+  z-index: 11;
+  margin-right: auto; /* ดันไปซ้ายสุด */
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  height: auto;
+  max-height: 40px;
+  width: auto;
+  max-width: 80vw;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  
+}
+
+.nav-left a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-family: sans-serif;
+}
+
+.nav-left a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-left {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .nav-left a {
+    font-size: 0.8rem;
+  }
+}
+
+.title-banner {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.unicorn-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  max-height: 100vh;
+  z-index: 1;
+  width: auto;
+  max-width: 40%;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .title-banner {
+    flex-direction: row;
+    padding-left: 5rem;
+    padding-top: 2rem;
+  }
+
+  .title-center {
+    margin-left: 40%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .unicorn-left {
+    position: relative;
+    max-width: 80%;
+    max-height: 50vh;
+    order: 1;
+    margin-bottom: 1rem;
+  }
+
+  .title-center {
+    order: 2;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .title-banner {
+    padding: 1.5rem 1rem;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .unicorn-left {
+    max-width: 90%;
+    max-height: 40vh;
+  }
+}
+
+.title-sub-logo {
+  height: clamp(1.5rem, 4vw, 2rem);
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+.main-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: bold;
+  color: #FFFF00;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.community-info {
+  margin: 1.5rem 0;
+}
+
+.community-info p {
+  color: #FFFF00;
+  font-weight: bold;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-bottom: 0.5rem;
+}
+
+.first-line-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  background: linear-gradient(45deg, #FFFF00, #FFD700);
+  color: #000;
+  border: none;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+  box-shadow: 0 4px 15px rgba(255, 255, 0, 0.3);
+  text-align: center;
+  min-width: 150px;
+}
+
+.first-line-button:hover {
+  background: linear-gradient(45deg, #FFD700, #FFFF00);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 0, 0.4);
+}
+
+.ca-text {
+  font-family: monospace;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  color: #ccc;
+  margin: 1rem 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.ca-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  background-color: #000;
+  color: #FFFF00;
+  border: 2px solid #FFFF00;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.ca-button:hover {
+  background-color: #FFFF00;
+  color: #000;
+}
+
+.section {
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 1.5rem);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 5vw, 3rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3rem) 0;
+  border-bottom: 2px solid #FFFF00;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content-row:last-child {
+  border-bottom: none;
+}
+
+.text-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.text-content h2 {
+  color: #FFFF00;
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.text-content p {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.image-content {
+  flex: 1;
+  text-align: center;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  max-height: clamp(200px, 40vw, 300px);
+  object-fit: contain;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .content-row {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .text-content, .image-content {
+    padding: 1rem;
+  }
+}
+
+/* Lightning Animation Container */
+#lightning-container {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.lightning {
+  position: absolute;
+  width: clamp(100px, 30vw, 300px);
+  height: auto;
+  opacity: 0;
+  animation: flash 1.8s ease-in-out forwards;
+  z-index: 50;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+  }
+  5% {
+    opacity: 1;
+    transform: scale(1.1) rotate(2deg);
+  }
+  10% {
+    opacity: 0.3;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1.08) rotate(1deg);
+  }
+  20% {
+    opacity: 0.2;
+    transform: scale(1) rotate(-2deg);
+  }
+  25% {
+    opacity: 0.9;
+    transform: scale(1.05) rotate(1deg);
+  }
+  30% {
+    opacity: 0.1;
+    transform: scale(1.02) rotate(0deg);
+  }
+  35% {
+    opacity: 0.8;
+    transform: scale(1.03) rotate(-1deg);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1) rotate(1deg);
+  }
+  70% {
+    opacity: 0.2;
+    transform: scale(0.98) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) rotate(0deg);
+  }
+}
+
+.social-platform-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px;
+}
+
+/* ปรับขนาดของปุ่มและไอคอนให้เหมาะกับหน้าจอเล็ก */
+.social-links,
+.platform-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ปรับขนาดไอคอนบนมือถือ */
+.platform-logo {
+  width: 32px;
+  height: auto;
+}
+
+/* ปุ่มโซเชียลที่ยืดหยุ่น */
+.social-btn {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  min-width: 120px;
+  justify-content: flex-start;
+}
+@media (max-width: 600px) {
+  .social-platform-container {
+    align-items: center; /* ให้ชิดกลางบนมือถือ ถ้าต้องการ */
+  }
+
+  .social-links,
+  .platform-logos {
+    justify-content: center; /* ปรับให้อยู่ตรงกลางหน้าจอบนมือถือ */
+  }
+}
+
+/* Dex Link */
+.dex-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #FFFF00;
+  color: #000;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.dex-link:hover {
+  background-color: #fff200;
+}
+
+
+@media (max-width: 480px) {
+  .social-btn {
+    padding: 0.6rem 1rem;
+    min-width: 100px;
+  }
+}
+
+.x-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.x-btn:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.telegram-btn {
+  background-color: #FFFF00;
+  color: #000000;
+  border: 2px solid #FFFF00;
+}
+
+.telegram-btn:hover {
+  background-color: #FFFF00;
+  transform: scale(1.05);
+}
+
+.social-icon {
+  width: clamp(20px, 4vw, 24px);
+  height: clamp(20px, 4vw, 24px);
+}
+
+/* Platform Logos */
+.platform-logos {
+  display: flex;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.platform-logo {
+  width: clamp(60px, 12vw, 80px);
+  height: clamp(60px, 12vw, 80px);
+  object-fit: contain;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.platform-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
+}
+
+/* Roadmap Section */
+.roadmap-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 8vw, 4rem) clamp(1rem, 5vw, 5rem);
+  background: linear-gradient(135deg, #000000 0%, #111111 100%);
+  position: relative;
+}
+
+.roadmap-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1500px, 90vw);
+  border-top: 2px solid #FFFF00;
+}
+
+.roadmap-title {
+  text-align: center;
+  color: #FFFF00;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: bold;
+  margin-bottom: clamp(3rem, 8vw, 6rem);
+  text-shadow: 2px 2px 4px rgba(255, 255, 0, 0.3);
+}
+
+.roadmap-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: clamp(3rem, 8vw, 6rem);
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .roadmap-item.left {
+    flex-direction: row;
+  }
+
+  .roadmap-item.right {
+    flex-direction: row-reverse;
+  }
+}
+
+.roadmap-title-box {
+  background: linear-gradient(45deg, #FFFF00, #FFD700);
+  color: #000;
+  padding: 1.2rem 1.5rem;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  box-shadow: 0 4px 15px rgba(255, 255, 0, 0.3);
+  position: relative;
+  min-width: 200px;
+  text-align: center;
+}
+
+.roadmap-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 2px solid #FFFF00;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .roadmap-content {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.roadmap-content h3 {
+  color: #FFFF00;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.roadmap-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.roadmap-content li {
+  color: #fff;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.5;
+}
+
+.roadmap-content li:before {
+  content: "→";
+  color: #FFFF00;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Arrow Styles */
+.arrow {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #FFFF00, #FFD700);
+  position: relative;
+  margin: 0 2rem;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .arrow {
+    transform: rotate(0deg);
+  }
+  
+  .roadmap-item.right .arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -6px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid #FFFF00;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.5));
+}
+
+/* Our Partners Title */
+.our-partners-title {
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: bold;
+  color: #FFFF00;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 6px rgba(255, 255, 0, 0.3);
+}
+
+/* Ticker Animation */
+@keyframes seamless-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.fade-mask {
+  width: min(60vw, 800px);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.ticker-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: clamp(8rem, 20vw, 12rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-ticker {
+  display: flex;
+  animation: seamless-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.tickerlogo {
+  width: clamp(6rem, 15vw, 10rem);
+  margin: 0 clamp(0.5rem, 2vw, 1rem);
+  flex-shrink: 0;
+}
+
+.final-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 2rem 0;
+}
+
+.final-logo {
+  width: clamp(80px, 15vw, 100px);
+  height: auto;
+  opacity: 0.9;
+}
+
+.section-header {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.section-divider {
+  width: min(1500px, 90vw);
+  height: 3px;
+  background-color: #FFFF00;
+  margin: 0 auto 10px auto;
+  border-radius: 2px;
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 480px) {
+  .title-banner {
+    padding: 1rem;
+    min-height: 80vh;
+  }
+  
+  .section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .content-row {
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .social-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .platform-logos {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .roadmap-section {
+    padding: 2rem 1rem;
+  }
+  
+  .roadmap-item {
+    margin-bottom: 3rem;
+  }
+  
+  .roadmap-title-box {
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .ticker-wrapper {
+    height: 8rem;
+  }
+  
+  .fade-mask {
+    width: 90vw;
+  }
+}
+
+/* Large Screen Optimizations */
+@media (min-width: 1200px) {
+  .content-row {
+    padding: 4rem 0;
+  }
+  
+  .roadmap-section {
+    padding: 5rem 6rem;
+  }
+  
+  .section {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Ultra-wide Screen Support */
+@media (min-width: 1600px) {
+  .content-row,
+  .roadmap-container {
+    max-width: 1400px;
+  }
+  
+  .main-title {
+    font-size: 6rem;
+  }
+  
+  .roadmap-title {
+    font-size: 4rem;
+  }
+}
