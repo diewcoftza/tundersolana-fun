@@ -44,6 +44,9 @@ section.realtime-data {
   font-size: 1.5rem;
   margin-top: -15px;
 }
+.round {
+  margin-top: 1rem;
+}
 .round .right {
   font-size: 1.5rem;
   text-align: right;
