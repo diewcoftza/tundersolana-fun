@@ -37,16 +37,50 @@ section.realtime-data {
 .token-info .label {
   color: #999;
 }
+.round-name {
+  font-size: 2.5rem;
+}
+.pct-text {
+  font-size: 1.5rem;
+  margin-top: -15px;
+}
+.round .right {
+  font-size: 1.5rem;
+  text-align: right;
+  margin-top: 8px;
+}
+.round .max {
+  font-size: 2rem;
+}
+.round .msg {
+  margin-top: -10px;
+}
+.progress-bar {
+  background-color: #333;
+  height: 2rem;
+}
+.fill-bar {
+  background-color: #FF0;
+  height: 2rem;
+}
+
+/* common */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 .clear-box {
   clear: both;
 }
 
+/* responsive */
 @media (max-width: 768px) {
   .token-info .col {
     width: 100%;
   }
 }
-
 @media (max-width: 1200px) {
   section.realtime-data {
     padding: 0 2rem;
