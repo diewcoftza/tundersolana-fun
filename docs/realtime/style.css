@@ -1,0 +1,54 @@
+section.realtime-data {
+  padding: 0 8rem;
+}
+.token-info {
+  border: 3px solid #FF0;
+  border-radius: 15px;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.marketcap .name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FF0;
+}
+.marketcap .cap {
+  margin-top: -15px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.marketcap .desc {
+  margin-top: -15px;
+  color: #999;
+}
+.token-info .row {
+  margin-top: 0.5rem;
+}
+.token-info .col {
+  width: 33.33%;
+  float: left;
+  padding: 0.4rem;
+}
+.token-info .box {
+  border: 2px solid #555;
+  border-radius: 10px;
+}
+.token-info .label {
+  color: #999;
+}
+.clear-box {
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .token-info .col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  section.realtime-data {
+    padding: 0 2rem;
+  }
+}

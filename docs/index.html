@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MadUnicorn Tunder</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./realtime/style.css" />
 </head>
 <body>
   <!-- Header -->
@@ -77,22 +78,31 @@
   <!-- Realtime Data -->
   <section class="realtime-data">
     <div class="token-info">
-      <div>Tunder Token</div>
-      <div>$16.61M</div>
-      <div>Current Market Cap</div>
-    </div>
-    <div class="token-info2">
-      <div class="price">
-        <div class="label">Price</div>
-        <div class="value">$0.016985</div>
+      <div class="marketcap">
+        <div class="name">Tunder Token</div>
+        <div class="cap">$16.61M</div>
+        <div class="desc">Current Market Cap</div>
       </div>
-      <div class="supply">
-        <div class="label">Circulating Supply</div>
-        <div class="value">998.99M</div>
-      </div>
-      <div class="vol-24h">
-        <div class="label">24H Volume</div>
-        <div class="value">$5.30M</div>
+      <div class="row">
+        <div class="col">
+          <div class="box">
+            <div class="label">Price</div>
+            <div class="value">$0.016985</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="box">
+            <div class="label">Circulating Supply</div>
+            <div class="value">998.99M</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="box">
+            <div class="label">24H Volume</div>
+            <div class="value">$5.30M</div>
+          </div>
+        </div>
+        <div class="clear-box"></div>
       </div>
     </div>
     <div class="rounds">
@@ -314,5 +324,7 @@
 
   <!-- JS for lightning effect -->
   <script src="lightning.js"></script>
+  <!-- JS for feed realtime data -->
+  <script src="realtime/script.js"></script>
 </body>
 </html>
