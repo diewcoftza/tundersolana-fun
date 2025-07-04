@@ -1,5 +1,6 @@
 section.realtime-data {
   padding: 0 8rem;
+  margin-bottom: -3rem;
 }
 .token-info {
   border: 3px solid #FF0;
@@ -80,6 +81,9 @@ section.realtime-data {
 
 /* responsive */
 @media (max-width: 768px) {
+  section.realtime-data {
+    margin-bottom: -1rem;
+  }
   .token-info .col {
     width: 100%;
   }
