@@ -80,6 +80,18 @@ section.realtime-data {
 }
 
 /* responsive */
+@media (max-width: 480px) {
+  .round-name, .round .max {
+    font-size: 2rem;
+  }
+  .pct-text, .round .msg {
+    font-size: 1.5rem;
+    margin-top: -15px;
+  }
+  .round .right {
+    margin-top: 0px;
+  }
+}
 @media (max-width: 768px) {
   section.realtime-data {
     margin-bottom: -1rem;
